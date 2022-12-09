@@ -1,8 +1,4 @@
-import {
-  TableData,
-  TableDataHeaders,
-  convertTableDataToJSON,
-} from "../../lib/core";
+import { TableData, convertTableDataToJSON } from "../../lib/core";
 
 const testTableDataRow: TableData = [
   ["Test 1", "Test 2", "Test 3"],
@@ -135,7 +131,7 @@ it("should parse table data using headers option", () => {
 it("should modify headers using modifyHeaders option", () => {
   const modifyHeaders = jest.fn();
 
-  const output = convertTableDataToJSON(testTableDataRow, {
+  convertTableDataToJSON(testTableDataRow, {
     preset: "row",
     modifyHeaders,
   });

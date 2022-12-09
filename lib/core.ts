@@ -340,7 +340,7 @@ export function convertTableDataToJSON<Data = GenericData, Output = object>(
 
   // Get the cell headers for a specific cell
   const getCellHeaders = (c: number, r: number) => {
-    let cellHeaders: TableDataHeader[][] = [];
+    const cellHeaders: TableDataHeader[][] = [];
     headers.forEach((cells, depth) => {
       const _cellHeaders = cells.filter((h) => {
         const cMin = h.c;

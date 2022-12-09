@@ -1,14 +1,14 @@
 {
   "name": "table-data-to-json",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert array table data to JSON.",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "rm -rf ./dist && tsc",
-    "lint": "eslint 'index.ts' './declarations/**/*.ts' './__tests__/**/*.ts' './lib/**/*.ts' -c .eslintrc.json --ignore-path .lintignore",
-    "lint:fix": "eslint 'index.ts' './declarations/**/*.ts' './__tests__/**/*.ts' './lib/**/*.ts' -c .eslintrc.json --ignore-path .lintignore --fix",
+    "lint": "eslint 'index.ts' 'lib/**/*.ts' '__tests__/**/*.ts' -c .eslintrc.json --ignore-path .lintignore",
+    "lint:fix": "eslint 'index.ts' 'lib/**/*.ts' '__tests__/**/*.ts' -c .eslintrc.json --ignore-path .lintignore --fix",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "pre-publish": "npm run lint && npm run build && npm run test"

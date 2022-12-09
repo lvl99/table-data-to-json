@@ -28,7 +28,7 @@ export function keepAllowedValues<T = AllowedValue>(
 export function acceptAllowedValue<T = AllowedValue>(
   input: T | T[],
   allowedValues: T[] | CheckAllowedValueFn<T>,
-  throwError: boolean = false
+  throwError = false
 ): T | T[] | undefined {
   if (
     !allowedValues ||
